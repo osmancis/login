@@ -1,0 +1,25 @@
+<html>
+    <script>
+        function store () {
+            var inputUsername= document.getElementById("username");
+            var inputPassword= document.getElementById("password");
+            localStorage.setItem("usernamelocal", inputUsername.value);
+            localStorage.setItem("passwordlocal", inputPassword.value);
+            //window.location.href = "login.html";
+            window.open("login.html");
+        }
+    </script>
+    
+    <body>
+        <h1>Registration Page</h1>
+        <form>
+            Enter Name: <input style="text" id="username"><br><br>
+            Password:   <input type="password"  id="password"><br><br>
+            MobileNumber:  <input type="number" id="mobileNumber"><br><br>
+            EmailId: <input type="email" id="emailid"><br><br>
+            <button onclick="store()">save</button>
+        </form>
+        
+
+    </body>
+</html>

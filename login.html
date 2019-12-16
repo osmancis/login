@@ -1,0 +1,35 @@
+<!-- <form method="GET"> -->
+    <h1>Yourbook</h1>
+    Name<input type="text" id="userName" name="tx" value="" placeholder="user name"><br>
+
+    Password<input type="password" id="passwordCurrent" name="password value=""><br>
+   Forgot Password <a href="forgot pass">clickhere</a><br>
+
+   <button type="button"  onclick="check()" value="login">Login</button>
+<!-- </form> -->
+
+<form action="reg.html"">
+    <input type="submit" value="Go to Registration" />
+</form>
+    
+
+<script >
+
+function check(){
+    var storedName = localStorage.getItem('usernamelocal');
+    var storedPw = localStorage.getItem('passwordlocal');
+
+
+    var username = document.getElementById('userName');
+    var password = document.getElementById('passwordCurrent');
+
+  
+    if(username.value !== storedName || password.value !== storedPw) {
+        alert('ERROR');
+    }
+    else {
+        alert('You are loged in.');
+    }
+}
+
+</script>
